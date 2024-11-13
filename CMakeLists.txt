@@ -18,6 +18,7 @@ project (libgeodesk)
 set(BUILD_SHARED_LIBS OFF)
 
 option(GEODESK_PYTHON "Build GeoDesk with Python support" OFF)
+option(GEODESK_PYTHON_WHEELS "Enable Support for Python Wheels" OFF)
 
 # Option to choose between static or shared library
 # Only set the option if BUILD_SHARED_LIBS is not already defined
@@ -69,13 +70,16 @@ endif()
 message(STATUS "GeoDesk: INCLUDES = ${INCLUDES}")
 
 if(GEODESK_PYTHON)
-    message(STATUS "GeoDesk: Building with Python support (PythonExtensions).")
     target_compile_definitions(geodesk PUBLIC GEODESK_PYTHON)
-    # find_package(Python REQUIRED COMPONENTS Development)
-    find_package(PythonExtensions REQUIRED)
+    if(GEODESK_PYTHON_WHEELS)
+        message(STATUS "GeoDesk: Building with Python support (PythonExtensions).")
+        find_package(PythonExtensions REQUIRED)
+    else()
+        find_package(Python REQUIRED COMPONENTS Development)
+        target_include_directories(geodesk PRIVATE ${Python_INCLUDE_DIRS})
+        target_link_libraries(geodesk PUBLIC ${Python_LIBRARIES})
+    endif()
     message(STATUS "Python libraries: ${Python_LIBRARIES}")
-    # target_include_directories(geodesk PRIVATE ${Python_INCLUDE_DIRS})
-    # target_link_libraries(geodesk PUBLIC ${Python_LIBRARIES})
 endif()
 
 # Ensure correct export/import of symbols for shared libraries
