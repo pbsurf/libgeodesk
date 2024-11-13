@@ -77,9 +77,10 @@ if(GEODESK_PYTHON)
     else()
         find_package(Python REQUIRED COMPONENTS Development)
     endif()
+    message(STATUS "Python_INCLUDE_DIRS: ${Python_INCLUDE_DIRS}")
+    message(STATUS "Python_LIBRARIES: ${Python_LIBRARIES}")
     target_include_directories(geodesk PUBLIC ${Python_INCLUDE_DIRS})
     target_link_libraries(geodesk PUBLIC ${Python_LIBRARIES})
-    message(STATUS "Python libraries: ${Python_LIBRARIES}")
 endif()
 
 # Ensure correct export/import of symbols for shared libraries
