@@ -69,13 +69,13 @@ endif()
 message(STATUS "GeoDesk: INCLUDES = ${INCLUDES}")
 
 if(GEODESK_PYTHON)
-    message(STATUS "GeoDesk: Building with Python support.")
+    message(STATUS "GeoDesk: Building with Python support (PythonExtensions).")
     target_compile_definitions(geodesk PUBLIC GEODESK_PYTHON)
     # find_package(Python REQUIRED COMPONENTS Development)
     find_package(PythonExtensions REQUIRED)
     message(STATUS "Python libraries: ${Python_LIBRARIES}")
-    target_include_directories(geodesk PRIVATE ${Python_INCLUDE_DIRS})
-    target_link_libraries(geodesk PUBLIC ${Python_LIBRARIES})
+    # target_include_directories(geodesk PRIVATE ${Python_INCLUDE_DIRS})
+    # target_link_libraries(geodesk PUBLIC ${Python_LIBRARIES})
 endif()
 
 # Ensure correct export/import of symbols for shared libraries
