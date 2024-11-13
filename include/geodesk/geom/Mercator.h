@@ -47,6 +47,8 @@ public:
         return xFromLon(static_cast<double>(lon) / 10000000.0);
     }
 
+    /// @brief Converts latitude (in WGS-84 degrees) to a %Mercator Y-coordinate.
+    ///
     static int32_t yFromLat(double lat)
     {
         return static_cast<int32_t>(round(std::log(std::tan((lat + 90.0) 
@@ -60,7 +62,7 @@ public:
 
     static double roundTo100nd(double deg)
     {
-        const double factor = 1e7;  // 10^7
+        constexpr double factor = 1e7;  // 10^7
         return std::round(deg * factor) / factor;
     }
 
