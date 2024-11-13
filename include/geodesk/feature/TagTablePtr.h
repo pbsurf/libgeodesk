@@ -133,7 +133,7 @@ public:
 	}
 	// This is always based off the raw tagged pointer (i.e. with the local_key bit,
 	// if any), not the actual pointer
-	
+
 private:
 	explicit TagTablePtr(TaggedPtr<const uint8_t,1> taggedPtr) : taggedPtr_(taggedPtr) {}
 

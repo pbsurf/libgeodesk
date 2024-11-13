@@ -36,7 +36,7 @@ public:
 		return *this;
 	}
 
-	explicit operator uint_fast32_t() const
+	explicit operator uint32_t() const
 	{
 		return tile_;
 	}
