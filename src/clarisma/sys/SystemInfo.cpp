@@ -27,5 +27,6 @@ SystemInfo::SystemInfo()
     Console::msg("Max working set: %llu", maxWorkingSet);
 }
 
-#endif
 } // namespace clarisma
+
+#endif
