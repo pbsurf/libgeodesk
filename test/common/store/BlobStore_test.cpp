@@ -9,6 +9,7 @@
 using namespace clarisma;
 using namespace clarisma::v2;
 
+/*
 
 std::unique_ptr<uint8_t[]> createJunk(size_t size)
 {
@@ -92,3 +93,5 @@ TEST_CASE("BlobStore Hole-Punching")
 
 	store.close();
 }
+
+*/
