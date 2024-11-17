@@ -11,6 +11,8 @@
 
 namespace geodesk {
 
+/// \cond
+
 template<typename P>
 class FeatureBase;
 template<typename T>
@@ -29,7 +31,6 @@ class Ways;
 class Relations;
 
 // TODO: type restrictions on derived
-/// \cond
 
 template <typename T>
 class FeaturesBase

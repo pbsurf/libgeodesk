@@ -26,6 +26,11 @@ class MatcherHolder;
 
 using clarisma::DataPtr;
 
+/// @brief A Geographic Object Library.
+///
+/// This class if part of the **Low-Level API**. It is not intended to
+/// be used directly by applications.
+///
 class GEODESK_API FeatureStore final : public clarisma::BlobStore
 {
 public:

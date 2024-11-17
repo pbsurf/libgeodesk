@@ -73,7 +73,7 @@ int main(int argc, char* argv[])
 
     // Get the feature that represents the area of the city of Zurich
     Feature zurich = features(
-        "a[boundary=adminstrative][admin_level=8]"
+        "a[boundary=administrative][admin_level=8]"
         "[name:en=Zurich]").one();
 
     // Define a set that contains nodes and areas that are pubs
