@@ -118,9 +118,8 @@ int numberOfEntrances = building.nodes("[entrance]").count();
 
 ## Documentation
 
-[GeoDesk Developer's Guide](https://docs.geodesk.com/cpp)
-
-[API Reference](https://cppdoc.geodesk.com)
+- [GeoDesk Developer's Guide](https://docs.geodesk.com/cpp)
+- [API Reference](https://cppdoc.geodesk.com)
 
 ## Related Repositories
 
