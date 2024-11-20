@@ -120,6 +120,8 @@ int numberOfEntrances = building.nodes("[entrance]").count();
 
 [GeoDesk Developer's Guide](https://docs.geodesk.com/cpp)
 
+[API Reference](https://cppdoc.geodesk.com)
+
 ## Related Repositories
 
 - [geodesk](http://www.github.com/clarisma/geodesk) &mdash; GeoDesk for Java
