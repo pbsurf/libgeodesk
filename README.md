@@ -30,9 +30,20 @@ Also available [for Python](http://www.github.com/clarisma/geodesk-py) and [for 
 - C++20 compiler with a Standard Library for Windows, Linux or MacOS
 - Java 16 or above (for the GOL Tool)
  
-### Build & Install
+### Build & Link
 
-GeoDesk has no dependencies and can be built with **CMake**:
+If you project uses **CMake**, add this to your `CMakeLists.txt`:
+
+```cmake
+include(FetchContent)
+FetchContent_Declare(geodesk GIT_REPOSITORY 
+    https://github.com/clarisma/libgeodesk.git)
+FetchContent_MakeAvailable(geodesk)
+
+target_link_libraries(my_program geodesk)
+```
+
+Alternatively, build GeoDesk explicitly:
 
 ```
 git clone https://github.com/clarisma/libgeodesk.git
@@ -41,12 +52,6 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-```
-
-To install (*optional*):
-
-```
-cmake --install .
 ```
 
 ### Create a GOL
@@ -65,7 +70,7 @@ gol build switzerland switzerland-latest.osm.pbf
 Find all the pubs in Zurich (Switzerland) and print their names:
 
 ```cpp
-#include <geodesk.h>
+#include <geodesk/geodesk.h>
 
 using namespace geodesk;
 
