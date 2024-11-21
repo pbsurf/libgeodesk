@@ -20,7 +20,7 @@ Also available [for Python](http://www.github.com/clarisma/geodesk-py) and [for 
 - **Modest hardware requirements** &mdash; any 64-bit Windows, Linux or MacOS system will run GeoDesk.
 
 - **Lightweight** &mdash; the full query engine adds less than 250 KB and has no link-time dependencies. 
-  Ir uns entirely in-process, no separate database server required.
+  It runs entirely in-process, no database server required.
  
 ## Get Started
 
@@ -32,7 +32,7 @@ Also available [for Python](http://www.github.com/clarisma/geodesk-py) and [for 
  
 ### Build & Link
 
-If you project uses **CMake**, add this to your `CMakeLists.txt`:
+If your project uses **CMake**, add this to your `CMakeLists.txt`:
 
 ```cmake
 include(FetchContent)
