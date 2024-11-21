@@ -11,13 +11,16 @@ Also available [for Python](http://www.github.com/clarisma/geodesk-py) and [for 
 
 - **Fast to get started** &mdash; Converting `.osm.pbf` data to a GOL is 20 times faster than an import into an SQL database. Alternatively, download pre-made data tiles for just the regions you need and automatically assemble them into a GOL.
 
-- **Intuitive API** &mdash; No need for object-relational mapping; GeoDesk queries return Python objects. Quickly discover tags, way-nodes and relation members. Get a feature's geometry, measure its length/area. 
+- **Intuitive API** &mdash; No need for object-relational mapping; GeoDesk queries return lightweight C++ objects. Quickly discover tags, way-nodes and relation members. Get a feature's geometry, measure its length/area. 
  
 - **Proper handling of relations** &mdash; (Traditional geospatial databases deal with geometric shapes and require workarounds to support this unique and powerful aspect of OSM data.)
 
-- **Seamless integration with Shapely** for advanced geometric operations, such as buffer, union, simplify, convex and concave hulls, Voronoi diagrams, and much more.
+- **Optional integration with GEOS** for advanced geometric operations, such as buffer, union, simplify, convex and concave hulls, Voronoi diagrams, and much more.
 
 - **Modest hardware requirements** &mdash; any 64-bit Windows, Linux or MacOS system will run GeoDesk.
+
+- **Lightweight** &mdash; the full query engine adds less than 250 KB and has no link-time dependencies. 
+  Ir uns entirely in-process, no separate database server required.
  
 ## Get Started
 
