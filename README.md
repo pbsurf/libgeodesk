@@ -28,7 +28,7 @@ Also available [for Python](http://www.github.com/clarisma/geodesk-py) and [for 
 
 - [CMake](https://cmake.org/download) 3.14 or later
 - C++20 compiler with a Standard Library for Windows, Linux or MacOS
-- Java 16 or above (for the GOL Tool)
+- Java 16 or above (to run the [GOL Tool](https://docs.geodesk.com/gol))
  
 ### Build & Link
 
