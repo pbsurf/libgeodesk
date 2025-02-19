@@ -54,6 +54,7 @@ file(GLOB_RECURSE SOURCE_FILES "src/*.cpp")
 
 # Create the library
 add_library(geodesk ${SOURCE_FILES})
+target_compile_features(geodesk INTERFACE cxx_std_20)
 set_target_properties(geodesk PROPERTIES CXX_VISIBILITY_PRESET hidden)
 set(INCLUDES include src ${boost_crc_SOURCE_DIR}/include)
 if(GEODESK_WITH_GEOS)
