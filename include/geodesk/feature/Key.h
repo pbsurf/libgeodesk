@@ -49,7 +49,7 @@ public:
 
     /// @brief The character data of the key string
     ///
-    /// **Note:** The string is *not* guaranteed to 0-trminated.
+    /// **Note:** The string is *not* guaranteed to 0-terminated.
     ///
     const char* data() const noexcept { return data_; }
 
