@@ -119,7 +119,7 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/
         DESTINATION include 
         FILES_MATCHING PATTERN "*.h")
 
-if(NOT GEODESK_PYTHON)
+if(NOT GEODESK_PYTHON AND NOT BUILD_SHARED_LIBS)
     # Define a simple test target (optional)
     enable_testing()
     file(GLOB_RECURSE TEST_SOURCE_FILES "test/*.cpp")
