@@ -10,6 +10,7 @@
 #include <clarisma/store/BlobStore.h>
 #include <clarisma/thread/ThreadPool.h>
 #include <geodesk/export.h>
+#include <geodesk/feature/Key.h>
 #include <geodesk/feature/StringTable.h>
 #include <geodesk/match/Matcher.h>
 #include <geodesk/match/MatcherCompiler.h>
@@ -70,6 +71,13 @@ public:
     bool isAllMatcher(const MatcherHolder* matcher) const
     {
         return matcher == &allMatcher_;
+    }
+
+    Key key(std::string_view k) const
+    {
+        int code = strings_.getCode(k.data(), k.size());
+        return Key(k.data(), static_cast<uint32_t>(k.size()),
+            code > TagValues::MAX_COMMON_KEY ? -1 : code);
     }
 
     #ifdef GEODESK_PYTHON
