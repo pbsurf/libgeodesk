@@ -65,6 +65,10 @@ public:
     bool operator==(const Key&) const = default; // C++20
     bool operator!=(const Key&) const = default; // C++20
 
+    bool isNull() const { return !data_; }
+
+    Key() : Key(nullptr, 0, -1) {}
+
 private:
     // Can only be constructed by a FeatureStore
     Key(const char* data, int32_t size, int code) :
@@ -81,7 +85,7 @@ template<typename Stream>
 Stream& operator<<(Stream& out, const Key& k)
 {
     out.write(k.data(), k.size());
-	return static_cast<Stream&>(out);
+  return static_cast<Stream&>(out);
 }
 
 } // namespace geodesk
